@@ -61,3 +61,4 @@ class Libplacebo < Formula
     system "./test"
   end
 end
+

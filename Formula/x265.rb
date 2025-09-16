@@ -24,16 +24,6 @@ class X265 < Formula
     depends_on "nasm" => :build
   end
 
-  # cmake 4 workaround, remove in next release
-  patch do
-    url "https://api.bitbucket.org/2.0/repositories/multicoreware/x265_git/diff/b354c009a60bcd6d7fc04014e200a1ee9c45c167"
-    sha256 "f7d3ce261c4b0cd461b55ad00de38ffa6a7cc2fa13ae6f034b3e46d8bb3cb6a8"
-  end
-  patch do
-    url "https://api.bitbucket.org/2.0/repositories/multicoreware/x265_git/diff/51ae8e922bcc4586ad4710812072289af91492a8"
-    sha256 "56c78f60cbaac61a44cb6e9889ece3380f9b60d32a4b704e274d9a636a16379d"
-  end
-
   def install
     ENV.runtime_cpu_detection
     # Build based off the script at ./build/linux/multilib.sh
